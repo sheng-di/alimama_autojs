@@ -62,18 +62,21 @@ w.copybtn.click(function() {
     toast('请前往分享界面')
   }
 })
-hideFloat()
+// hideFloat()
 
 // 进程：仅在复制文案界面，显示悬浮窗
+// setInterval(() => {
+//   let flag = text("复制文案").exists() || desc('复制文案').exists()
+//   if (flag) {
+//     if (!showStatus) {
+//       showFloat()
+//     }
+//   } else {
+//     if (showStatus) {
+//       hideFloat()
+//     }
+//   }
+// }, 100)
+
 setInterval(() => {
-  let flag = text("复制文案").exists() || desc('复制文案').exists()
-  if (flag) {
-    if (!showStatus) {
-      showFloat()
-    }
-  } else {
-    if (showStatus) {
-      hideFloat()
-    }
-  }
-}, 100)
+}, 1000);
