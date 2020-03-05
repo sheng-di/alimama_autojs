@@ -16,8 +16,9 @@ function replaceSentence(content) {
   let tkl = tklPattern.exec(content)[0]
   let onSale = onSalePattern.exec(content)[1]
   let after = afterPattern.exec(content)[1]
+  let title = content.split('\n')[0]
   let result =
-    "❤️\n【原价】 " +
+    "❤️❤️❤️❤️❤️❤️❤️❤️\n" + title +"\n【原价】 " +
     onSale +
     "元\n【券后价】" +
     after +
@@ -65,7 +66,7 @@ hideFloat()
 
 // 进程：仅在复制文案界面，显示悬浮窗
 setInterval(() => {
-  let flag = text("复制文案").exists()
+  let flag = text("复制文案").exists() || desc('复制文案').exists()
   if (flag) {
     if (!showStatus) {
       showFloat()
