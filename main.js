@@ -65,7 +65,7 @@ hideFloat()
 
 // 进程：仅在复制文案界面，显示悬浮窗
 setInterval(() => {
-  let flag = descContains("您的佣金预计为").exists()
+  let flag = text("复制文案").exists()
   if (flag) {
     if (!showStatus) {
       showFloat()
@@ -75,4 +75,4 @@ setInterval(() => {
       hideFloat()
     }
   }
-}, 300)
+}, 100)
